@@ -1,2 +1,6 @@
-# hackattic
-solutions for hackattic challenges
+# Hackattic
+
+## Challenges
+
+- [x] Reading QR
+- [x] Help me unpack

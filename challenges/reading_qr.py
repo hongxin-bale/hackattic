@@ -1,7 +1,7 @@
 from utils.hackattic import image_request, data_request, read_token, solution_post
 import cv2
 from pyzbar.pyzbar import decode
-from os import remove
+import os
 
 
 def main(token):
@@ -20,7 +20,7 @@ def main(token):
     # -------------------
     
     # Remove the image
-    remove(challenge_image)
+    os.remove(challenge_image)
     
     # Generating the dict and sending the solution
     challenge_solution = {}
@@ -31,5 +31,6 @@ def main(token):
 # only executed when the script is run as the main program, and not when it is imported as a module into another script.
 if __name__ == "__main__":
     # Token filename
-    token = read_token("token.config")
+    token_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'token.config')
+    token = read_token(token_path)
     main(token)

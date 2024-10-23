@@ -6,7 +6,7 @@ def image_request(image_url, image_name = "image.png"):
     res = requests.get(image_url)
     res.raise_for_status()
     
-    image_path = "../assets/" + image_name
+    image_path = ".../assets/" + image_name
     with open(image_path, 'wb') as handler:
         handler.write(res.content)
     print('Image obtained and saved in {image_path}.')
@@ -16,10 +16,11 @@ def file_request(zip_url, zip_name = "file"):
     res = requests.get(zip_url)
     res.raise_for_status()
     
-    file_path = "../assets/" + zip_name
+    file_path = ".../assets/" + zip_name
     with open(file_path, 'wb') as download_file:
         download_file.write(res.content)
     print('File obtained and saved in {file_path}.')
+    return file_path
     
 def read_token(token_file):
     with open(token_file,'r') as file_handler:
