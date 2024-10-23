@@ -3,8 +3,6 @@ import os
 import base64
 import struct
 
-
-
 def main(token):
     # Name of challenge
     challenge_name = "help_me_unpack"
