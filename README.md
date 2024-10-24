@@ -4,4 +4,4 @@
 
 - [x] Reading QR
 - [x] Help me unpack
-- [ ] Mini miner
+- [x] Mini miner
